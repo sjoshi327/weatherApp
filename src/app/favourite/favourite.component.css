@@ -1,0 +1,18 @@
+body {
+ font-family: calibri;
+
+
+}
+.navigation {
+    background-color: lightgreen;
+}
+
+.card{
+	background-color:steelblue;
+margin-top: 5px;
+}
+
+.navbar{
+	background-color: whitesmoke;
+  
+}

@@ -1,0 +1,51 @@
+.image{
+	width:50%;
+}
+
+
+h5,h6{
+	color:white;
+}
+
+.card{
+	background-color:steelblue;
+	margin-top: 5%;
+	margin-bottom: 30%;
+}
+.container{
+	margin-top:3%;
+	margin-bottom: 15%;
+}
+
+.footer {
+   width: 100%;
+   background-color:darkgrey ;
+   margin-left: 0px;
+
+  
+}
+
+
+/*For Media Query in footer*/
+
+@media only screen and (max-width :500px) {
+   #footerAddress {
+       display: none;
+   }
+   #footerAbout {
+       display: none;
+   }
+}
+.imageSize {
+
+   width: 20px;
+   height: 20px;
+}
+
+.social,.navigationLink {
+  color: black;
+}
+.space{
+   
+   margin-top: 10px;
+}

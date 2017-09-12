@@ -1,0 +1,63 @@
+<!-- <div class="jumbotron"><br> -->
+<div class="container">
+<h3 class="text-center"> {{city.location.name}}({{city.location.region}})</h3>
+<!-- </div> -->
+<div *ngIf="city.forecast">
+<div  class="row"> 
+ <div *ngFor= "let edit of city.forecast.forecastday">
+<div class="col-md-4 ">
+<div class="card text-center" style="width: 15rem;">
+<div class="card-body text-center">
+ <img class="card-img-top text-center image" src="{{edit.day.condition.icon}}" >
+
+   <h5 class="card-title">Date: {{edit.date}}</h5>
+   <h6 class="card-text">Max.Temp.: {{edit.day.maxtemp_c}}&deg;C</h6>
+   <h6 class="card-text">Min.Temp.: {{edit.day.mintemp_c}}&deg;C</h6>
+   <h6 class="card-text">Condition:{{edit.day.condition.text}}</h6>
+<a class="btn btn-success" (click)="save(city.location.name,city.location.region,edit)">Add Favourite</a>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+
+
+
+<footer>
+<div class="footer row space fixed-bottom">
+                   <div class="col-sm-4 space" id="footerAddress">
+                       <h6 class="social">Address</h6>
+                       <p>WeatherIn.com</p>
+                       <p>Greater Noida </p>
+                       <p>201301(U.P),India</p>
+                   </div>
+                   <div class="col-sm-4 pull-right space" id="footerAbout">
+                       <h6 class="social">Navigation</h6>
+                       <ul class="active">
+                           <li class="social"><h6><a class="navigationLink" href="#">About Us</a></h6></li>
+                           <li class="social"><h6><a class="navigationLink" href="#">Home</a></h6></li>
+                           <li class="social"><h6><a class="navigationLink" href="#">Links</a></h6></li>
+                           <li class="social"><h6><a class="navigationLink" href="#">Contact</a></h6></li>
+                       </ul>
+                       
+                       <h6 class="social">Copyright &copy; 2017 WeatherIn.com</h6>
+                   </div>
+                   <div class="col-sm-3 pull-right space">
+                       <h6 class="social">Follow Us</h6>
+                       <ul class="active">
+
+                       <li class="social"><h6><a class="navigationLink" href="https://www.twitter.com">Twitter</a></h6></li>
+                       <li class="social"><h6><a class="navigationLink" href="https://www.facebook.com">Facebook</a></h6></li>
+                       <li class="social"><h6><a class="navigationLink" href="https://www.youtube.com">YouTube</a></h6></li>
+                       <li class="social"><h6><a class="navigationLink" href="https://www.instagram.com/">Instagram</a></h6></li>
+                       </ul>
+                       <br>
+                       <br>
+                       
+                   </div>
+               </div>
+           
+           <!--End Footer-->
+       </footer>

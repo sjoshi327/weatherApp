@@ -1,0 +1,49 @@
+<div class="container-fluid">
+
+<header>
+
+        <nav class="navbar navbar-expand-lg navbar-light navigation">
+          <a class="navbar-brand" href="#"><strong style="color:blue">WeatherIn</strong></a>
+          <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+          </button>
+          <div class="collapse navbar-collapse" id="navbarSupportedContent">
+            <ul class="navbar-nav mr-auto">
+              <li class="nav-item active">
+               <a class="navbar-brand" [routerLink]="'/search'"><h6 style="color:blue">Back To Home</h6></a></li>
+
+            </ul>
+           
+             
+          </div>
+        </nav>
+ </header>
+
+          <div class="container-fluid">
+<div class="row"> 
+ 
+<div *ngFor= "let city of city">
+<div class="col-md-4 text-center">
+<div class="card " style="width: 15rem;">
+ <img class="card-img-top">
+<div class="card-body">
+<h5 class="card-title">{{city.city}}({{city.region}})</h5>
+   <h6 class="card-text">Date: {{city.date}}</h6>
+   <h6 class="card-text">Max.Temp.: {{city.maxTemp}}&deg;C</h6>
+    <h6 class="card-text">Min.Temp.: {{city.minTemp}}&deg;C</h6>
+   <h6 class="card-text">Condition.: {{city.condition}}</h6>
+  <a class="btn btn-outline-danger" (click)="delete(city)">Delete</a>
+    <!-- <a class="btn btn-danger" (click)="update(city)">Update</a>
+     -->
+
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+
+
+
+  
